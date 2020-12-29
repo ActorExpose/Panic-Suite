@@ -21,7 +21,7 @@ class bcolors:
 def Options():
 	print ("\n")
 	print (bcolors.GREEN+"[1]"+bcolors.ENDC+bcolors.RED+" Phishing attack"+bcolors.ENDC)
-	print (bcolors.GREEN+"[2]"+bcolors.ENDC+bcolors.RED+" Locate Phones"+bcolors.ENDC)
+	#print (bcolors.GREEN+"[2]"+bcolors.ENDC+bcolors.RED+" Locate Phones"+bcolors.ENDC)
 	print ("\n")
 
 	option = input(bcolors.GREEN+"[Social-Eng]"+bcolors.ENDC+bcolors.RED+"Panic"+bcolors.ENDC+bcolors.WHITE+":"+bcolors.ENDC+bcolors.BLUE+"~/ "+bcolors.ENDC)
@@ -128,9 +128,4 @@ def Close():
 	os.system("killall -2 ngrok > /dev/null 2>&1")
 	print ("["+bcolors.RED+"✘"+bcolors.ENDC+"] "+"Service Ngrok inactive\n")
 	time.sleep(1)
-
-
-
-def LocatePhone():
-	print ("hello locate")
 

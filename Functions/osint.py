@@ -22,7 +22,7 @@ def Options():
 	print (bcolors.GREEN+"[1]"+bcolors.ENDC+bcolors.RED+" Password Breach"+bcolors.ENDC)
 	print (bcolors.GREEN+"[2]"+bcolors.ENDC+bcolors.RED+" User Recon"+bcolors.ENDC)
 	print (bcolors.GREEN+"[3]"+bcolors.ENDC+bcolors.RED+" IP Info"+bcolors.ENDC)
-	print (bcolors.GREEN+"[4]"+bcolors.ENDC+bcolors.RED+" Documents metadata"+bcolors.ENDC)
+	#print (bcolors.GREEN+"[4]"+bcolors.ENDC+bcolors.RED+" Documents metadata"+bcolors.ENDC)
 
 
 	print ("\n")
@@ -34,8 +34,7 @@ def Options():
 		UserRecon()
 	elif(option == "3"):
 		GetIpInfo()
-	elif(option == "4"):
-		DocumentMetaData()
+	
 	else:
 		print (bcolors.RED+"\nthis option is not valid!\n"+bcolors.ENDC)
 
@@ -171,30 +170,4 @@ def GetIpInfo():
 	print ("["+bcolors.GREEN+"+"+bcolors.ENDC+"] "+bcolors.GREEN+"Time Zone: "+bcolors.ENDC+result.timezone)
 	print ("["+bcolors.GREEN+"+"+bcolors.ENDC+"] "+bcolors.GREEN+"Map View: "+bcolors.ENDC+"http://www.google.com/maps/place/"+coordinates[0]+","+coordinates[1]+"/@"+coordinates[0]+","+coordinates[1]+",16z")
 	print ("\n")
-
-
-def DocumentMetaData():
-
-
-	file_name = "mydoc.docx"
-
-	document = docx.Document(docx = file_name)
-	core_properties = document.core_properties
-	print(core_properties.author)
-	print(core_properties.created)
-	print(core_properties.last_modified_by)
-	print(core_properties.last_printed)
-	print(core_properties.modified)
-	print(core_properties.revision)
-	print(core_properties.title)
-	print(core_properties.category)
-	print(core_properties.comments)
-	print(core_properties.identifier)
-	print(core_properties.keywords)
-	print(core_properties.language)
-	print(core_properties.subject)
-	print(core_properties.version)
-	print(core_properties.keywords)
-	print(core_properties.content_status)
-
 
